@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Feed from "./components/Feed/Feed";
+import Widgets from "./components/Widgets/Widgets";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <div className="app__body">
         <Sidebar />
         <Feed />
+        <Sidebar />
       </div>
     </div>
   );

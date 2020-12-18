@@ -5,5 +5,8 @@
 }
 .app__body {
   display: flex;
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }

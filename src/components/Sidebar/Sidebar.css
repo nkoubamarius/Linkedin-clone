@@ -5,8 +5,8 @@
   border-radius: 10px;
   text-align: center;
   height: fit-content;
-  margin: auto;
-  max-width: 250px;
+  max-width: 216px;
+  min-width: 216px;
 }
 
 .sidebar__avatar {
@@ -27,11 +27,11 @@
 
 .sidebar__top > h4 {
   color: gray;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .sidebar__top > h2 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .sidebar__top > img {
@@ -60,7 +60,7 @@
 
 .sidebar__stat > p {
   color: gray;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
 }
 
@@ -91,7 +91,7 @@
 
 .sidebar__recentItem {
   display: flex;
-  font-size: 13px;
+  font-size: 11px;
   color: gray;
   font-weight: bolder;
   cursor: pointer;
