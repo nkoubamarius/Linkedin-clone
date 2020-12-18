@@ -27,6 +27,13 @@
   overflow-wrap: anywhere;
 }
 
+.post__body > p {
+  margin-left: 10%;
+  color: #70b5f9;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .post__buttons {
   display: flex;
   justify-content: space-evenly;
