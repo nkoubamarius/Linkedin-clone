@@ -11,6 +11,7 @@ import { db } from "../../firebase";
 import firebase from "firebase";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
+import FlipMove from "react-flip-move";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -59,10 +60,26 @@ const Feed = () => {
           </form>
         </div>
         <div className="feed__inputOptions">
-          <InputOption title="Photo" Icon={ImageIcon} color="#70B5F9" />
-          <InputOption title="Video" Icon={SubscriptionsIcon} color="#E7A33E" />
-          <InputOption title="Event" Icon={EventNoteIcon} color="#C0CBCD" />
           <InputOption
+            key="ph"
+            title="Photo"
+            Icon={ImageIcon}
+            color="#70B5F9"
+          />
+          <InputOption
+            key="vi"
+            title="Video"
+            Icon={SubscriptionsIcon}
+            color="#E7A33E"
+          />
+          <InputOption
+            key="ev"
+            title="Event"
+            Icon={EventNoteIcon}
+            color="#C0CBCD"
+          />
+          <InputOption
+            key="wa"
             title="Write article"
             Icon={CalendarViewDayIcon}
             color="#7FC15E"
@@ -70,17 +87,22 @@ const Feed = () => {
         </div>
       </div>
 
-      {posts.map(
-        ({ id, data: { name, description, message, photoUrl, timestamp } }) => (
-          <Post
-            key={id}
-            name={name}
-            description={description}
-            message={message}
-            photoUrl={photoUrl}
-          />
-        )
-      )}
+      <FlipMove>
+        {posts.map(
+          ({
+            id,
+            data: { name, description, message, photoUrl, timestamp },
+          }) => (
+            <Post
+              key={id}
+              name={name}
+              description={description}
+              message={message}
+              photoUrl={photoUrl}
+            />
+          )
+        )}
+      </FlipMove>
     </div>
   );
 };
